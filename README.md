@@ -1,8 +1,5 @@
 # Eshop Reflection
 
-## Overview
-This repository implements a simple product flow using Spring Boot (create, list, edit, delete). This reflection reviews the current code against clean code principles and secure coding practices from the module, and notes improvements.
-
 ## Clean Code Principles Applied
 - Separation of concerns: controller, service, and repository are split across packages (`controller`, `service`, `repository`).
 - Single responsibility: each class has one main responsibility (routing, business logic, data access).
@@ -24,5 +21,3 @@ This repository implements a simple product flow using Spring Boot (create, list
 - Product ID is generated in service, but there is no uniqueness check for manually provided IDs. Improve by always generating IDs server-side or validating uniqueness.
 - Form fields use `type="text"` for quantity, which allows invalid values. Improve by using `type="number"` and server-side validation.
 
-## Summary
-The code is readable and modular, but security and robustness can be improved, especially around delete semantics, validation, and error handling.
